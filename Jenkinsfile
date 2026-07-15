@@ -38,10 +38,10 @@ pipeline {
         }
 
         stage('Wait for MySQL') {
-            steps {
-                bat 'timeout /t 20'
-            }
-        }
+		    steps {
+		        sleep(time: 20, unit: 'SECONDS')
+		    }
+		}
 
         stage('Build') {
             steps {
